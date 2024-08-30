@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Widget</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
-
-
 <body>
     <h1>Web Widget V1.1</h1>
 
-    <script src='https://app.wotnot.unifonic.com/chat-widget/86cdaca66fcd4bfd8b646c4c65e353aa1fc81fd39450405e96f5fc50f94059.js' defer></script>
+    <!-- Load the widget script -->
+    <script src="https://app.unifonic.com/web-widget/YOUR_WIDGET_ID.js" defer></script>
+
+    <!-- Initialize the widget after loading the script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Replace 'YOUR_WIDGET_ID' with the actual widget ID provided by Unifonic
+            var widget = new UnifonicChatWidget({
+                widgetId: 'YOUR_WIDGET_ID', // Replace this with your actual widget ID
+                // Optional configurations
+                position: 'right', // Set widget position (left, right)
+                theme: 'default', // Set the theme
+                language: 'en' // Set the language
+            });
+
+            widget.init();
+        });
+    </script>
 </body>
 </html>
